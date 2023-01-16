@@ -1,0 +1,126 @@
+There are two text files with the following information stored in them:
+The instructor.txt file where each line stores the id, name and affiliated department of an instructor separated by a comma
+The department.txt file where each line stores the name, location and budget of the department separated by a comma
+
+You need to write a Java program that reads these text files and provides user with the following main menu:
+1. Get instructor information
+2. Insert a new instructor
+3. Insert a new department
+4. Exit
+
+The above menu should continue to be displayed in a loop until the user selects option 4  when your program should terminate.
+
+When the user selects option 1 above, the following should be displayed:
+Enter the instructor ID:
+If the user enters an instructor id that is not present in the text file, display "The ID doesnot appear in the file." and then ask for another id, otherwise, display the name of the instructor, affiliated department and the location of that department. Your program should then display the main menu as shown above and wait for the next user input.
+
+If the user selects option 2, display the following:
+Enter the instructor id:
+Enter the instructor name:
+Enter the affiliated department name:
+Once the user enters the above information, add the information in the instructor file only if the following two conditions are met: 
+1. The department already exists in the department file, otherwise, ask for another department name.
+2. The instructor id should not already be present in the file, otherwise, ask for a new instructor id. 
+Once done, your program should display the main menu and wait for the user input.
+
+If the user selects option 3, display the following:
+Enter the department name:
+Enter the location:
+Enter the budget:
+Once the user enters the above information, add the information in the department file only if the following conditions are met:
+1. The department does not already exist in the file.
+2. The department name is exactly four characters, the location is exactly three characters and the budget is greater than 0 but less than or equal to $100,000
+Once done, your program should display the main menu and wait for the user input.
+
+If the user selects option 4, you should end your program.
+
+The program should work for any number of rows in the two text files without you having to make any change to your code. During your final presentation, I may give you text files with different number of rows (same format though) and your program should run without having to make any changes to it.
+
+The code should use good programming practices with proper identifier names, proper indentation, spacing and comments where appropriate. The output should be displayed in a formatted manner that is easy readable.
+
+The code should be your own. Cheating of any kind will lead to a failing grade in the course and you will be reported to the Dean.
+
+Scoring (Total 20 points):
+5 points each for correctly implementing menu items 1, 2 and 3 and 2 points for correctly implementing menu item 4. They should work as intended displaying all the specified information, changing the files in case of options 2 and 3 without having to exit from the program and loop back to the main menu (or exit in case of option 4) to get full credit.
+3 points for correctly implementing the entire program, running it and showing it to me and submitting your code on Moodle with snapshots of output that displays the different scenarios.
+
+Submit a pdf file with the complete code and screenshot of the output for 5-10 different scenarios by specified deadline. On that day, each one of you will also run your code and show it to me during the class using the machines in the class (and not your personal machines).
+
+
+
+--Extra Credits--
+If you add the following addition menu item 5, I will change the score of one take-home assignement of your choice to full (20) points.
+
+5. Get department information
+When the user selects option 5, the following should be displayed:
+Enter the department name:
+If the user enters a department that is not present in the text file, display "The department doesnot appear in the file." Otherwise,display the location, budget and a list of all instructors affiliated with that department. If the user enters a department name that exists but with no instructors, you will only display the location and budget of the department.
+Sample run:
+Enter the department name: CMPT
+Location: RLC
+Budget: 75000
+Instructors:
+Robert Smith
+Guiling Wei
+David Ochs
+
+
+
+---Sample Output---
+1. Get instructor information
+2. Insert a new instructor
+3. Insert a new department
+4. Exit
+
+3
+Enter the department name: CMPT
+The department already exists.
+Enter the department name: PHY
+The department name should be 4 letters.
+Enter the department name: PHYS
+Enter the location: HAY
+Enter the budget: 150000
+The budget should be greater than 0 but less than or equal to $100,000.
+Enter the budget: 50000
+The department information has been added to the department file.
+
+1. Get instructor information
+2. Insert a new instructor
+3. Insert a new department
+4. Exit
+
+2
+Enter the instructor id: 1005
+The instructor id is already present.
+Enter the instructor id: 1010
+Enter the instructor name: Jane Doe
+Enter the affiliated department name:EECE
+The department does not exist.
+Enter the affiliated department name:PHYS
+The instructor information has been added to the instructor file.
+
+1. Get instructor information
+2. Insert a new instructor
+3. Insert a new department
+4. Exit
+
+1
+Enter the instructor ID: 1050
+The ID does not appear in the file
+Enter the instructor ID: 1010
+Name: Jane Doe
+Department: PHYS
+Location: HAY
+
+1. Get instructor information
+2. Insert a new instructor
+3. Insert a new department
+4. Exit
+
+4
+Program ended...
+
+
+
+
+java fx
